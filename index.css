@@ -1,0 +1,30 @@
+.results {
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.calculator {
+    border-style: solid;
+    width: 30%;
+}
+
+p {
+    border-bottom: solid;
+    padding-bottom: 15px;
+    margin-bottom: 0px;    
+
+}
+
+* {
+    text-align: center;
+}
+
+form {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: solid;
+  
+}

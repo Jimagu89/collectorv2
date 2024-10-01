@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Collections</title>
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <form id="divisionForm" onsubmit="event.preventDefault();">
+        <label for="numberInput">Account Balance:</label><br />
+        <input
+          type="number"
+          id="numberInput"
+          name="numberInput"
+          placeholder="Enter a number"
+          required
+        /><br />
 
-    <h2>Cavalry</h2>
-    <form action="">
-        <label for="balance">Balance</label>
-        <input type="number" id="balance" name="balance">
-    </form>
-    
-</body>
+      </form>
+
+      <div class="ppl"> 
+        <h2>Payment Plan on Full Balance</h2>
+        <button type="button" onclick="divideNumber(12)">Divide by 12</button>
+        <button type="button" onclick="divideNumber(24)">Divide by 24</button>
+        <button type="button" onclick="divideNumber(36)">Divide by 36</button>
+        <button type="button" onclick="divideNumber(48)">Divide by 48</button>
+        <p id="result"></p>
+      </div>
+      <div class="sif">
+        <h2>Settlement Balance:</h2>
+        <button type="button" onclick="multiplyBy(.85)">85%</button>
+        <button type="button" onclick="multiplyBy(.80)">80%</button>
+        <button type="button" onclick="multiplyBy(.75)">75%</button>
+        <button type="button" onclick="multiplyBy(.70)">70%</button>
+        <button type="button" onclick="multiplyBy(.65)">65%</button>
+        <button type="button" onclick="multiplyBy(.60)">60%</button>
+        <button type="button" onclick="multiplyBy(.20)">20%</button>
+        <p id="sifResult"></p>
+
+        <h2>Payment Plan on Settlement Balance</h2>
+        <button type="button" onclick="divideSIF(6)">Divide by 6</button>
+        <button type="button" onclick="divideSIF(12)">Divide by 12</button>
+        <button type="button" onclick="divideSIF(24)">Divide by 24</button>
+        <button type="button" onclick="divideSIF(36)">Divide by 36</button>
+        <button type="button" onclick="divideSIF(48)">Divide by 48</button>
+        <p id="sifPPL"></p>
+      </div>
+
+      
+
+
+    <script src="script.js"></script>
+  </body>
 </html>
