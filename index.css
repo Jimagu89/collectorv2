@@ -20,7 +20,7 @@ p {
     text-align: center;
 }
 
-form {
+#divisionForm {
     padding-top: 15px;
     padding-bottom: 20px;
     font-size: 20px;
@@ -35,12 +35,28 @@ form {
 }
 
 
-/* under contruction 
+ 
 .flex-container {
     display: flex;
-    flex-flow: column wrap;
     background-color: dodgerblue;
+    justify-content: space-between;
+    height: 100%;
+
     
 }
 
-*\
+.flex1 {
+ width: 50%;
+ height: 100%;
+
+}
+
+.flex2 {
+    width: 50%;
+    height: 100%;
+
+   }
+   
+textarea {
+    width: 98%;
+}
