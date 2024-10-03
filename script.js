@@ -1,13 +1,17 @@
 let multiplyResult = 0;
 
+
 function resetCalculations() {
     // Clear all result fields
     document.getElementById("result").textContent = "";
     document.getElementById("sifResult").textContent = "";
     document.getElementById("sifPPL").textContent = "";
-    
+
     // Reset multiplyResult
     multiplyResult = 0;
+
+    let buttons = document.querySelectorAll('.button');
+    buttons.forEach(btn => btn.classList.remove('active'));
   }
 
   document.getElementById("numberInput").addEventListener("input", resetCalculations);
@@ -85,4 +89,14 @@ function divideSIF(divisor) {
   ).innerHTML = `${multiplyResult.toFixed(
     2
   )} divided by ${divisor} is <span class="results">${formattedResult}</span>`;
+}
+
+function selectButton(sectionId, button) {
+  let section = document.getElementById(sectionId)
+  let buttons = section.querySelectorAll('.button');
+  
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  button.classList.add('active');
 }

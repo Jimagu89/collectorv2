@@ -1,56 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Collections</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div class="calculator">
-      <form id="divisionForm" onsubmit="event.preventDefault();">
-        <label for="numberInput">Account Balance:</label><br />
-        <input
-          type="number"
-          id="numberInput"
-          name="numberInput"
-          placeholder="Enter a number"
-          required
-        /><br />
 
-      </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
 
-      <div class="ppl"> 
-        <h2>Payment Plan on Full Balance</h2>
-        <button type="button" onclick="divideNumber(12)">Divide by 12</button>
-        <button type="button" onclick="divideNumber(24)">Divide by 24</button>
-        <button type="button" onclick="divideNumber(36)">Divide by 36</button>
-        <button type="button" onclick="divideNumber(48)">Divide by 48</button>
-        <p id="result"></p>
-      </div>
-      <div class="sif">
-        <h2>Settlement Balance:</h2>
-        <button type="button" onclick="multiplyBy(.85)">85%</button>
-        <button type="button" onclick="multiplyBy(.80)">80%</button>
-        <button type="button" onclick="multiplyBy(.75)">75%</button>
-        <button type="button" onclick="multiplyBy(.70)">70%</button>
-        <button type="button" onclick="multiplyBy(.65)">65%</button>
-        <button type="button" onclick="multiplyBy(.60)">60%</button>
-        <button type="button" onclick="multiplyBy(.20)">20%</button>
-        <p id="sifResult"></p>
+<body >
+  <div class="calculator, flex-container">
+    <form id="divisionForm" onsubmit="event.preventDefault();">
+      <label for="numberInput">Account Balance:</label><br />
+      <input type="number" id="numberInput" name="numberInput" placeholder="Enter a number" required /><br />
+    </form>
 
-        <h2>Payment Plan on Settlement Balance</h2>
-        <button type="button" onclick="divideSIF(6)">Divide by 6</button>
-        <button type="button" onclick="divideSIF(12)">Divide by 12</button>
-        <button type="button" onclick="divideSIF(24)">Divide by 24</button>
-        <button type="button" onclick="divideSIF(36)">Divide by 36</button>
-        <button type="button" onclick="divideSIF(48)">Divide by 48</button>
-        <p id="sifPPL"></p>
-      </div>
+    <div id="section1" class="ppl">
+      <h2>Payment Plan on Full Balance</h2>
+      <button class="button" type="button" onclick="divideNumber(6), selectButton('section1', this)">
+        Divide by 6
+      </button>
+      <button class="button" type="button" onclick="divideNumber(12), selectButton('section1', this)">
+        Divide by 12
+      </button>
+      <button class="button" type="button" onclick="divideNumber(24), selectButton('section1', this)">
+        Divide by 24
+      </button>
+      <button class="button" type="button" onclick="divideNumber(36), selectButton('section1', this)">
+        Divide by 36
+      </button>
+      <button class="button" type="button" onclick="divideNumber(48), selectButton('section1', this)">
+        Divide by 48
+      </button>
+      <p id="result"></p>
+    </div>
+    <div id="section2" class="sif">
+      <h2>Settlement Balance:</h2>
+      <button class="button" type="button" onclick="multiplyBy(.85), selectButton('section2', this)">
+        85%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.80), selectButton('section2', this)">
+        80%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.75), selectButton('section2', this)">
+        75%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.70), selectButton('section2', this)">
+        70%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.65), selectButton('section2', this)">
+        65%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.60), selectButton('section2', this)">
+        60%
+      </button>
+      <button class="button" type="button" onclick="multiplyBy(.20), selectButton('section2', this)">
+        20%
+      </button>
+      <p id="sifResult"></p>
+    </div>
+    <div id="section3" class="sifPpl">
+      <h2>Payment Plan on Settlement Balance</h2>
+      <button class="button" type="button" onclick="divideSIF(6), selectButton('section3', this)">
+        Divide by 6
+      </button>
+      <button class="button" type="button" onclick="divideSIF(12), selectButton('section3', this)">
+        Divide by 12
+      </button>
+      <button class="button" type="button" onclick="divideSIF(24), selectButton('section3', this)">
+        Divide by 24
+      </button>
+      <button class="button" type="button" onclick="divideSIF(36), selectButton('section3', this)">
+        Divide by 36
+      </button>
+      <button class="button" type="button" onclick="divideSIF(48), selectButton('section3', this)">
+        Divide by 48
+      </button>
+      <p id="sifPPL"></p>
+    </div>
+  </div>
 
-      
+ <!-- under construction
+  
+  <div class="notes">  
+    <form action="">
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+  </div>
+-->
+  <script src="script.js"></script>
+</body>
 
-
-    <script src="script.js"></script>
-  </body>
 </html>
